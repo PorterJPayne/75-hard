@@ -4,6 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>75 Hard Challenge Tracker</title>
+    
+    <!-- PWA Meta Tags -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="75 Hard">
+    <meta name="theme-color" content="#7c3aed">
+    <meta name="description" content="Track your 75 Hard challenge progress">
+    
+    <!-- Icons for different sizes -->
+    <link rel="apple-touch-icon" sizes="180x180" href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgwIiBoZWlnaHQ9IjE4MCIgdmlld0JveD0iMCAwIDE4MCAxODAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIxODAiIGhlaWdodD0iMTgwIiByeD0iNDAiIGZpbGw9InVybCgjZ3JhZGllbnQwX2xpbmVhcl8xXzEpIi8+CjxkZWZzPgo8bGluZWFyR3JhZGllbnQgaWQ9ImdyYWRpZW50MF9saW5lYXJfMV8xIiB4MT0iMCIgeTE9IjAiIHgyPSIxODAiIHkyPSIxODAiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj4KPHN0b3Agc3RvcC1jb2xvcj0iIzdjM2FlZCIvPgo8c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiNlYzQ4OTkiLz4KPC9saW5lYXJHcmFkaWVudD4KPC9kZWZzPgo8dGV4dCB4PSI5MCIgeT0iNzAiIGZvbnQtZmFtaWx5PSJzeXN0ZW0tdWksIC1hcHBsZS1zeXN0ZW0sIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMzYiIGZvbnQtd2VpZ2h0PSJib2xkIiBmaWxsPSJ3aGl0ZSIgdGV4dC1hbmNob3I9Im1pZGRsZSI+NzU8L3RleHQ+Cjx0ZXh0IHg9IjkwIiB5PSIxMTAiIGZvbnQtZmFtaWx5PSJzeXN0ZW0tdWksIC1hcHBsZS1zeXN0ZW0sIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMjQiIGZvbnQtd2VpZ2h0PSJib2xkIiBmaWxsPSJ3aGl0ZSIgdGV4dC1hbmNob3I9Im1pZGRsZSI+SEFSRDwvdGV4dD4KPHN2ZyB4PSI2MCIgeT0iMTIwIiB3aWR0aD0iNjAiIGhlaWdodD0iMjQiPgo8dGV4dCB4PSIzMCIgeT0iMTgiIGZvbnQtZmFtaWx5PSJzeXN0ZW0tdWksIC1hcHBsZS1zeXN0ZW0sIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTQiIGZpbGw9IiNjNGI1ZmQiIHRleHQtYW5jaG9yPSJtaWRkbGUiPkNoYWxsZW5nZTwvdGV4dD4KPC9zdmc+Cjwvc3ZnPgo=">
+    <link rel="icon" type="image/png" sizes="32x32" href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIiByeD0iOCIgZmlsbD0idXJsKCNncmFkaWVudDBfbGluZWFyXzFfMSkiLz4KPGRlZnM+CjxsaW5lYXJHcmFkaWVudCBpZD0iZ3JhZGllbnQwX2xpbmVhcl8xXzEiIHgxPSIwIiB5MT0iMCIgeDI9IjMyIiB5Mj0iMzIiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj4KPHN0b3Agc3RvcC1jb2xvcj0iIzdjM2FlZCIvPgo8c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiNlYzQ4OTkiLz4KPC9saW5lYXJHcmFkaWVudD4KPC9kZWZzPgo8dGV4dCB4PSIxNiIgeT0iMjIiIGZvbnQtZmFtaWx5PSJzeXN0ZW0tdWksIC1hcHBsZS1zeXN0ZW0sIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTQiIGZvbnQtd2VpZ2h0PSJib2xkIiBmaWxsPSJ3aGl0ZSIgdGV4dC1hbmNob3I9Im1pZGRsZSI+NzU8L3RleHQ+Cjwvc3ZnPgo=">
+    
+    <!-- Web App Manifest -->
+    <link rel="manifest" href="data:application/json;base64,ewogICJuYW1lIjogIjc1IEhhcmQgQ2hhbGxlbmdlIFRyYWNrZXIiLAogICJzaG9ydF9uYW1lIjogIjc1IEhhcmQiLAogICJkZXNjcmlwdGlvbiI6ICJUcmFjayB5b3VyIDc1IEhhcmQgY2hhbGxlbmdlIHByb2dyZXNzIGFuZCBkYWlseSB0YXNrcyIsCiAgInN0YXJ0X3VybCI6ICIuLyIsCiAgImRpc3BsYXkiOiAic3RhbmRhbG9uZSIsCiAgImJhY2tncm91bmRfY29sb3IiOiAiIzFlMjkzYiIsCiAgInRoZW1lX2NvbG9yIjogIiM3YzNhZWQiLAogICJvcmllbnRhdGlvbiI6ICJwb3J0cmFpdCIsCiAgImNhdGVnb3JpZXMiOiBbImZpdG5lc3MiLCAiaGVhbHRoIiwgInByb2R1Y3Rpdml0eSJdLAogICJpY29ucyI6IFsKICAgIHsKICAgICAgInNyYyI6ICJkYXRhOmltYWdlL3N2Zyt4bWw7YmFzZTY0LFBITjJaeUIzYVdSMGFEMGlOVEV5SWlCb1pXbG5hSFE5SWpVeE1pSWlJSFpwWlhkQ2IzZzlJakFnTUNBMU1USWdOVEV5SWlCbWFXeHNQU0p1YjI1bElpQjRiV3h1Y3oxaWFIUjBjRG92TDNkM2R5NTNNeTV2Y21jdk1qQXdNQzl6ZG1jaVBnbzhjbVZqZENCM2FXUjBhRDBpTlRFeUlpQm9aV2xuYUhROUlqVXhNaUlpSUhKNFBTSTJOQ0lnWm1sc2JEMGlkWEpzS0NObmNtRmthV1Z1ZERCZmJHbHVaV0Z5WHpGZk1Ta2lMejRLUEdSbFpuTStDanhzYVc1bFlYSkhjbUZrYVdWdWRDQnBaRDBpWjNKaFpHbGxiblF3WDJ4cGJtVmhjbDh4WHpFaUlIZ3hQU0l3SWlCNU1UMGlNQ0lnZURJOUlqVXhNaUlnZVRJOUlqVXhNaUlnWjNKaFpHbGxiblJWYm1sMGN6MGlkWE5sY2xOd1lXTmxUMjVWYzJVaVBnbzhjM1J2Y0NCemRHOXdMV052Ykc5eVBTSWpOMk16WVdWa0lpOCtDanh6ZEc5d0lHOW1abk5sZEQwaU1TSWdjM1J2Y0MxamIyeHZjajBpSTJWak5EZzVPU0l2UGdvOEwyeHBibVZoY2tkeVlXUnBaVzUwUGdvOEwyUmxabk0rQ2p4MFpYaDBJSGc5SWpJMU5pSWdlVDBpTVRVeUlpQm1iMjUwTFdaaGJXbHNlVDBpYzNsemRHVnRMWFZwTENCdFlYQnNaUzF6ZVhOMFpXMHNJSE5oYm5NdGMyVnlhV1lpSUdadmJuUXRjMmw2WlQwaU16WWlJR1p2Ym5RdGQyVnBaMmgwUFNKaWIyeGtJaUJtYVd4c1BTSjNhR2wwWlNJZ2RHVjRkQzFoYm1Ob2IzSTlJbTFwWkdSc1pTSStOelU4TDNSbGVIUStDanh3WVhSb0lHUTlJazB5TlRZZ01qSTRRalkwSURJeU9FRXlOVFlnTWpJNElFZzJOQ0JXTWpJNFNETTFNa1l5TWpnZ1ZqWTBJRTB5TlRZZ01qSTRXaUlnWm1sc2JEMGlJMk0wWWpWbVpDSXZQZ284TDNOMlp6NEsiLAogICAgICAic2l6ZXMiOiAiNTEyeDUxMiIsCiAgICAgICJ0eXBlIjogImltYWdlL3N2Zyt4bWwiCiAgICB9LAogICAgewogICAgICAic3JjIjogImRhdGE6aW1hZ2Uvc3ZnK3htbDtiYXNlNjQsUEhOMlp5QjNhV1IwYUQwaU1UZ3dJaUJvWldsbmFIUTlJakU0TUNJaWRtbGxkMEp2ZUQwaU1DQXdJREU0TUNJZ01UZ3dJaUJtYVd4c1BTSnViMjVsSWlCNGJXeHVjejFpYUhSMGNEb3ZMM2QzZHk1M015NXZjbWN2TWpBd01DOXpkbWNpUGdvOGNtVmpkQ0IzYVdSMGFEMGlNVGd3SWlCb1pXbG5hSFE5SWpFNE1DSWljbmc5SWpRd0lpQm1hV3hzUFNKMWNtd29JMmR5WVdScFpXNTBNRjlzYVc1bFlYSmZNVjh4S1NJdlBnbzhaR1ZtY3o0S1BHeHBibVZoY2tkeVlXUnBaVzUwSUdsa1BTSm5jbUZrYVdWdWREQmZiR2x1WldGeVh6RmZNU0lnZURFOUlqQWlJSGt4UFNJd0lpQjRNajBpTVRnd0lpQjVNajBpTVRnd0lpQm5jbUZrYVdWdWRGVnVhWFJ6UFNKMWMyVnljMUJoWTJWUGJsVnpaU0krQ2p4emRHOXdJSE4wYjNBdFkyOXNiM0k5SWlOall6TmhaV1FpTHo0S1BITjBiM0FnYjJabWMyVjBQU0l4SWlCemRHOXdMV052Ykc5eVBTSWpaV00wT0RrNUlpOCtDanh2YkdsdVpXRnlSM0poWkdsbGJuUStDand2WkdWbWN6NEtQSFJsZUhRZ2VEMGlPVEFpSUhrOUlqY3dJaUJtYjI1MExXWmhiV2xzZVQwaWMzbHpkR1Z0TFhWcExDQXRZWEJ3YkdVdGMzbHpkR1Z0TENCellXNXpMWE5sY21sbUlpQm1iMjUwTFhOcGVtVTlJak0ySWlCbWIyNTBMWGRsYVdkb2REMGlZbTlzWkNJZ1ptbHNiRDBpZDJocGRHVWlJSFJsZUhRdFlXNWphRzl5UFNKdGFXUmtiR1VpUGpjMVBDOTBaWGgwUGdvOGRHVjRkQ0I0UFNJNVFTSWdlVDBpTVRFd0lpQm1iMjUwTFdaaGJXbHNlVDBpYzNsemRHVnRMWFZwTENCdFlYQnNaUzF6ZVhOMFpXMHNJSE5oYm5NdGMyVnlhV1lpSUdadmJuUXRjMmw2WlQwaU1qUWlJR1p2Ym5RdGQyVnBaMmgwUFNKaWIyeGtJaUJtYVd4c1BTSjNhR2wwWlNJZ2RHVjRkQzFoYm1Ob2IzSTlJbTFwWkdSc1pTSStTRUZTUkR3dmRHVjRkRDRLUEhOMlp5QjRQU0kyTUNJZ2VUMGlNVEl3SWlCM2FXUjBhRDBpTmpBaUlHaGxhV2RvZEQwaU1qUWlQZ284ZEdWNGRDQjRQU0l6TUNJZ2VUMGlNVGdpSUdadmJuUXRabUZ0YVd4NVBTSnplWE4wWlcwdGRXa3NJQzFoY0hCc1pTMXplWE4wWlcwc0lITmhibk10YzJWeWFXWWlJR1p2Ym5RdGMybDZaVDBpTVRRaUlHWnBiR3c5SWlOak5HSjFabVFpSUhSbGVIUXRZVzVqYUc5eVBTSnRhV1JrYkdVaVBrTm9ZV3hzWlc1blpUd3ZkR1Y0ZEQ0S1BDOXpkbWMrQ2p3dmMzWm5QZ289IiwKICAgICAgInNpemVzIjogIjE4MHgxODAiLAogICAgICAidHlwZSI6ICJpbWFnZS9zdmcreG1sIgogICAgfQogIF0KfQ==">
     <style>
         * {
             margin: 0;
@@ -72,7 +86,7 @@
 
         .progress-header {
             display: flex;
-            justify-content: between;
+            justify-content: space-between;
             margin-bottom: 8px;
             font-size: 0.875rem;
             color: #c4b5fd;
@@ -297,341 +311,6 @@
             transition: all 0.3s ease;
         }
 
-        .button-small {
-            background: rgba(139, 92, 246, 0.2);
-            color: #c4b5fd;
-            border: 1px solid rgba(139, 92, 246, 0.4);
-            padding: 8px 16px;
-            border-radius: 8px;
-            font-size: 0.875rem;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .button-small:hover {
-            background: rgba(139, 92, 246, 0.3);
-        }
-
-        .food-input-section {
-            margin-bottom: 24px;
-        }
-
-        .input-group {
-            display: flex;
-            gap: 12px;
-            margin-bottom: 16px;
-        }
-
-        .food-input {
-            flex: 1;
-            padding: 12px 16px;
-            border: 2px solid rgba(255, 255, 255, 0.2);
-            border-radius: 8px;
-            background: rgba(255, 255, 255, 0.05);
-            color: white;
-            font-size: 1rem;
-            transition: all 0.3s ease;
-        }
-
-        .food-input:focus {
-            outline: none;
-            border-color: #8b5cf6;
-            background: rgba(255, 255, 255, 0.1);
-        }
-
-        .food-input::placeholder {
-            color: #9ca3af;
-        }
-
-        .button-add {
-            background: linear-gradient(90deg, #8b5cf6, #7c3aed);
-            color: white;
-            border: none;
-            padding: 12px 20px;
-            border-radius: 8px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            white-space: nowrap;
-        }
-
-        .button-add:hover {
-            background: linear-gradient(90deg, #7c3aed, #6d28d9);
-        }
-
-        .food-entries {
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 12px;
-            padding: 16px;
-        }
-
-        .food-list {
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-        }
-
-        .food-entry {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 12px 16px;
-            border-radius: 8px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-left: 4px solid #8b5cf6;
-        }
-
-        .food-time {
-            font-size: 0.75rem;
-            color: #c4b5fd;
-            margin-left: 12px;
-        }
-
-        .delete-food {
-            background: rgba(239, 68, 68, 0.2);
-            color: #fca5a5;
-            border: none;
-            border-radius: 4px;
-            padding: 4px 8px;
-            cursor: pointer;
-            font-size: 0.75rem;
-            transition: all 0.3s ease;
-        }
-
-        .delete-food:hover {
-            background: rgba(239, 68, 68, 0.3);
-        }
-
-        .food-history-modal {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.8);
-            z-index: 1000;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .food-history-content {
-            background: rgba(30, 41, 59, 0.95);
-            backdrop-filter: blur(16px);
-            border-radius: 16px;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            width: 90%;
-            max-width: 600px;
-            max-height: 80vh;
-            overflow-y: auto;
-            padding: 24px;
-        }
-
-        .food-history-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 20px;
-            padding-bottom: 16px;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-        }
-
-        .food-history-header h3 {
-            color: white;
-            font-size: 1.5rem;
-            margin: 0;
-        }
-
-        .close-button {
-            background: rgba(239, 68, 68, 0.2);
-            color: #fca5a5;
-            border: none;
-            border-radius: 50%;
-            width: 32px;
-            height: 32px;
-            cursor: pointer;
-            font-size: 1.2rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: all 0.3s ease;
-        }
-
-        .close-button:hover {
-            background: rgba(239, 68, 68, 0.3);
-        }
-
-        .food-history-list {
-            display: flex;
-            flex-direction: column;
-            gap: 16px;
-        }
-
-        .food-day-section {
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 12px;
-            padding: 16px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .food-day-header {
-            font-weight: bold;
-            color: #8b5cf6;
-            margin-bottom: 12px;
-            font-size: 1.1rem;
-        }
-
-        .button-drive {
-            background: linear-gradient(90deg, #4285f4, #34a853);
-            color: white;
-            border: none;
-            padding: 12px 20px;
-            border-radius: 8px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            margin: 0 auto;
-        }
-
-        .button-drive:hover {
-            background: linear-gradient(90deg, #3367d6, #2d8f4f);
-        }
-
-        .button-photo {
-            background: linear-gradient(90deg, #ec4899, #8b5cf6);
-            color: white;
-            border: none;
-            padding: 16px 24px;
-            border-radius: 12px;
-            font-size: 1.125rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            width: 100%;
-        }
-
-        .button-photo:hover {
-            background: linear-gradient(90deg, #db2777, #7c3aed);
-        }
-
-        .drive-setup, .photo-upload {
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 12px;
-            padding: 20px;
-            text-align: center;
-        }
-
-        .upload-area {
-            margin-bottom: 24px;
-        }
-
-        .recent-photos {
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 12px;
-            padding: 16px;
-        }
-
-        .photos-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-            gap: 12px;
-            margin-top: 12px;
-        }
-
-        .photo-thumb {
-            aspect-ratio: 1;
-            border-radius: 8px;
-            overflow: hidden;
-            cursor: pointer;
-            border: 2px solid rgba(255, 255, 255, 0.2);
-            transition: all 0.3s ease;
-        }
-
-        .photo-thumb:hover {
-            border-color: #8b5cf6;
-            transform: scale(1.05);
-        }
-
-        .photo-thumb img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .photo-gallery-modal {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.9);
-            z-index: 1000;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .photo-gallery-content {
-            background: rgba(30, 41, 59, 0.95);
-            backdrop-filter: blur(16px);
-            border-radius: 16px;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            width: 95%;
-            max-width: 1000px;
-            max-height: 90vh;
-            overflow-y: auto;
-            padding: 24px;
-        }
-
-        .photo-gallery-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 20px;
-            padding-bottom: 16px;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-        }
-
-        .photo-gallery-header h3 {
-            color: white;
-            font-size: 1.5rem;
-            margin: 0;
-        }
-
-        .photo-gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-            gap: 16px;
-        }
-
-        .photo-item {
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 12px;
-            padding: 12px;
-            text-align: center;
-        }
-
-        .photo-item img {
-            width: 100%;
-            aspect-ratio: 1;
-            object-fit: cover;
-            border-radius: 8px;
-            margin-bottom: 8px;
-        }
-
-        .photo-date {
-            color: #c4b5fd;
-            font-size: 0.875rem;
-            font-weight: 600;
-        }
-
         .modal-button:hover {
             background: #f3f4f6;
         }
@@ -685,7 +364,7 @@
 
             <div class="task-list">
                 <div class="task-item" onclick="toggleTask('diet')">
-                    <span class="task-icon">✓</span>
+                    <span class="task-icon">🥗</span>
                     <span class="task-label">Follow Diet (No Cheat Meals/Alcohol)</span>
                     <div class="task-checkbox">
                         <span style="display: none;">✓</span>
@@ -739,65 +418,6 @@
             </button>
         </div>
 
-        <!-- Photo Gallery -->
-        <div class="card">
-            <div class="section-header">
-                <h2 class="section-title">
-                    <span class="icon">📸</span>
-                    Progress Photos
-                </h2>
-                <button class="button-small" onclick="togglePhotoGallery()">View Gallery</button>
-            </div>
-
-            <!-- Google Drive Setup -->
-            <div id="driveSetup" class="drive-setup">
-                <div class="setup-info">
-                    <p style="color: #c4b5fd; margin-bottom: 16px;">
-                        Connect to Google Drive to automatically store and organize your progress photos.
-                    </p>
-                    <button class="button-drive" onclick="initializeGoogleDrive()">
-                        <span class="icon">🔗</span>
-                        Connect Google Drive
-                    </button>
-                </div>
-            </div>
-
-            <!-- Photo Upload Section -->
-            <div id="photoUpload" class="photo-upload" style="display: none;">
-                <div class="upload-area">
-                    <input type="file" id="photoInput" accept="image/*" capture="camera" style="display: none;" onchange="handlePhotoUpload(event)">
-                    <button class="button-photo" onclick="document.getElementById('photoInput').click()">
-                        <span class="icon">📷</span>
-                        Take/Upload Today's Photo
-                    </button>
-                    <p style="color: #9ca3af; font-size: 0.875rem; margin-top: 8px;">
-                        Photos will be saved to: 75 Hard Progress Photos folder in your Google Drive
-                    </p>
-                </div>
-
-                <!-- Recent Photos -->
-                <div class="recent-photos">
-                    <h4 style="margin-bottom: 12px; color: #c4b5fd;">Recent Photos:</h4>
-                    <div id="recentPhotosList" class="photos-grid">
-                        <p style="color: #9ca3af; font-style: italic;">No photos uploaded yet</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Photo Gallery Modal -->
-            <div class="photo-gallery-modal" id="photoGalleryModal" style="display: none;">
-                <div class="photo-gallery-content">
-                    <div class="photo-gallery-header">
-                        <h3>Progress Photo Gallery</h3>
-                        <button class="close-button" onclick="togglePhotoGallery()">✕</button>
-                    </div>
-                    <div id="photoGalleryGrid" class="photo-gallery-grid">
-                        <p style="color: #9ca3af; text-align: center;">Loading photos...</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
         <!-- Rules -->
         <div class="card">
             <h3 style="font-size: 1.25rem; font-weight: bold; margin-bottom: 16px;">75 Hard Rules</h3>
@@ -828,12 +448,10 @@
             <p class="modal-text">
                 You've completed the 75 Hard challenge! You've built incredible mental toughness and discipline.
             </p>
-            <button class="modal-button" onclick="resetChallenge()">Start New Challenge</button>
+            <button class="modal-button" onclick="closeModal()">Continue</button>
         </div>
     </div>
 
-    <script src="https://apis.google.com/js/api.js"></script>
-    <script src="https://accounts.google.com/gsi/client"></script>
     <script>
         // App state
         let appState = {
@@ -846,54 +464,65 @@
                 reading: false,
                 photo: false
             },
-            completedDays: [],
-            photos: [], // Store photo metadata
-            driveConnected: false
+            completedDays: []
         };
 
-        // Google Drive API configuration
-        const GOOGLE_CONFIG = {
-            apiKey: 'AIzaSyCH9Hh9xtmZoHw_4gGKKtMt3Tx9ni6rd7g', // Your API key
-            clientId: '943870554114-bhot2pn4mqa0efl1183afafjcmj49r0c.apps.googleusercontent.com', // Your OAuth client ID
-            discoveryDoc: 'https://www.googleapis.com/discovery/v1/apis/drive/v3/rest',
-            scope: 'https://www.googleapis.com/auth/drive.file'
-        };
+        // Load and save data functions
+        function loadData() {
+            try {
+                const savedState = localStorage.getItem('75hard-state');
+                if (savedState) {
+                    const parsed = JSON.parse(savedState);
+                    appState = { ...appState, ...parsed };
+                }
+            } catch (error) {
+                console.log('No saved data found, starting fresh');
+            }
+        }
 
-        let gapi, google;
-        let isGoogleAPILoaded = false;
-        let folderID = null;
+        function saveData() {
+            try {
+                localStorage.setItem('75hard-state', JSON.stringify(appState));
+            } catch (error) {
+                console.warn('Could not save data:', error);
+            }
+        }
 
         // Initialize app
         function init() {
             loadData();
             updateDisplay();
             updateDate();
+            
+            // Check if we need to reset tasks for a new day
+            checkNewDay();
         }
 
-        // Load data from localStorage
-        function loadData() {
-            const savedDay = localStorage.getItem('75hard-day');
-            const savedCompleted = localStorage.getItem('75hard-completed');
-            const savedPhotos = localStorage.getItem('75hard-photos');
-            const savedDriveStatus = localStorage.getItem('75hard-drive-connected');
+        // Check if it's a new day and reset tasks
+        function checkNewDay() {
             const today = new Date().toDateString();
-            const savedTasks = localStorage.getItem(`75hard-tasks-${today}`);
-
-            if (savedDay) appState.currentDay = parseInt(savedDay);
-            if (savedCompleted) appState.completedDays = JSON.parse(savedCompleted);
-            if (savedPhotos) appState.photos = JSON.parse(savedPhotos);
-            if (savedDriveStatus) appState.driveConnected = JSON.parse(savedDriveStatus);
-            if (savedTasks) appState.tasks = JSON.parse(savedTasks);
-        }
-
-        // Save data to localStorage
-        function saveData() {
-            localStorage.setItem('75hard-day', appState.currentDay.toString());
-            localStorage.setItem('75hard-completed', JSON.stringify(appState.completedDays));
-            localStorage.setItem('75hard-photos', JSON.stringify(appState.photos));
-            localStorage.setItem('75hard-drive-connected', JSON.stringify(appState.driveConnected));
-            const today = new Date().toDateString();
-            localStorage.setItem(`75hard-tasks-${today}`, JSON.stringify(appState.tasks));
+            const lastDate = localStorage.getItem('75hard-last-date');
+            
+            if (lastDate && lastDate !== today) {
+                // New day - reset tasks but keep progress
+                appState.tasks = {
+                    diet: false,
+                    workout1: false,
+                    workout2: false,
+                    water: false,
+                    reading: false,
+                    photo: false
+                };
+                
+                // Update current day if previous day was completed
+                if (appState.completedDays.includes(lastDate)) {
+                    appState.currentDay++;
+                }
+                
+                saveData();
+            }
+            
+            localStorage.setItem('75hard-last-date', today);
         }
 
         // Toggle task completion
@@ -910,6 +539,11 @@
 
         // Complete the current day
         function completeDay() {
+            if (!allTasksComplete()) {
+                alert('Please complete all tasks before finishing the day!');
+                return;
+            }
+
             const today = new Date().toDateString();
             if (!appState.completedDays.includes(today)) {
                 appState.completedDays.push(today);
@@ -919,13 +553,15 @@
                 // Check if challenge is complete
                 if (appState.completedDays.length >= 75) {
                     document.getElementById('successModal').style.display = 'flex';
+                } else {
+                    alert(`Great job! Day ${appState.currentDay} completed. Keep going strong! 💪`);
                 }
             }
         }
 
         // Reset the challenge
         function resetChallenge() {
-            if (confirm('Reset your 75 Hard challenge? This will clear all progress AND food diary entries.')) {
+            if (confirm('Are you sure you want to reset your 75 Hard challenge? This will clear all progress.')) {
                 appState = {
                     currentDay: 1,
                     tasks: {
@@ -936,31 +572,24 @@
                         reading: false,
                         photo: false
                     },
-                    completedDays: [],
-                    foodEntries: {}
+                    completedDays: []
                 };
 
                 // Clear localStorage
-                localStorage.removeItem('75hard-day');
-                localStorage.removeItem('75hard-completed');
-                localStorage.removeItem('75hard-food');
+                localStorage.removeItem('75hard-state');
+                localStorage.removeItem('75hard-last-date');
                 
-                // Clear task data
-                const keys = Object.keys(localStorage);
-                keys.forEach(key => {
-                    if (key.startsWith('75hard-tasks-')) {
-                        localStorage.removeItem(key);
-                    }
-                });
-
-                // Hide modals if open
+                // Hide modal
                 document.getElementById('successModal').style.display = 'none';
-                document.getElementById('foodHistoryModal').style.display = 'none';
 
                 updateDisplay();
-                updateFoodDisplay();
-                alert('Challenge reset successfully!');
+                alert('Challenge reset successfully! Ready to start fresh! 🚀');
             }
+        }
+
+        // Close modal
+        function closeModal() {
+            document.getElementById('successModal').style.display = 'none';
         }
 
         // Update the display
@@ -968,7 +597,6 @@
             // Update stats
             document.getElementById('currentDay').textContent = appState.currentDay;
             document.getElementById('dayNumber').textContent = appState.currentDay;
-            document.getElementById('foodDayNumber').textContent = appState.currentDay;
             document.getElementById('completedDays').textContent = appState.completedDays.length;
             document.getElementById('daysRemaining').textContent = 75 - appState.completedDays.length;
             
@@ -1014,9 +642,6 @@
                 completeButton.className = 'button button-disabled';
                 completeButton.disabled = true;
             }
-
-            // Update food display
-            updateFoodDisplay();
         }
 
         // Update current date display
@@ -1026,7 +651,17 @@
         }
 
         // Initialize the app when page loads
-        document.addEventListener('DOMContentLoaded', init);
+        document.addEventListener('DOMContentLoaded', function() {
+            init();
+        });
+
+        // Handle clicking outside modal to close it
+        window.onclick = function(event) {
+            const modal = document.getElementById('successModal');
+            if (event.target === modal) {
+                closeModal();
+            }
+        }
     </script>
 </body>
 </html>
